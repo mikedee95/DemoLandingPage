@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    :root {
+      --link-color: #e6ebff;
+    }
+    body {
+      margin: 0;
+      padding-top: 44px;
+      padding-bottom: 73px;
+    }
+    #w3lDemoBar.w3l-demo-bar,
+    #w3lDemoBar.w3l-demo-bar * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      text-align: left;
+    }
+    #w3lDemoBar.w3l-demo-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      /* display: grid;
+      grid-template-columns: 1fr 1fr 1fr; */
+      padding: 10px 15px;
+      background: #0D1326;
+      box-shadow: 0 1px 10px rgba(13, 19, 38, 0.5);
+    }
+    #w3lDemoBar.w3l-demo-bar:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    #w3lDemoBar.w3l-demo-bar .w3l-pagination {
+      line-height: 24px;
+    }
+    #w3lDemoBar.w3l-demo-bar .w3l-template-options {
+      float: right;
+      text-align: right
+    }
+    #w3lDemoBar.w3l-demo-bar .w3l-logo {
+      display: inline-block;
+      width: 131px;
+      height: 24px;
+      background-image: url('/images/W3Layouts-light.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      text-indent: -9999em;
+      margin: 0 auto;
+      line-height: inherit;
+    }
+    #w3lDemoBar.w3l-demo-bar .w3l-text,
+    #w3lDemoBar.w3l-demo-bar .w3l-icon {
+      display: inline-block;
+    }
+    #w3lDemoBar.w3l-demo-bar .w3l-icon svg{
+      display: block;
+      width: 100%;
+      font-family: inherit;
+    }
+    #w3lDemoBar.w3l-demo-bar a {
+      display: inline-block;
+      border-radius: 3px;
+      color: var(--link-color);
+      text-decoration: none;
+      line-height: 24px;
+      opacity: .6;
+    }
+    #w3lDemoBar.w3l-demo-bar a:hover {
+      opacity: 1;
+      transition: opacity .3s linear;
+    }
+    #w3lDemoBar.w3l-demo-bar .w3l-icon svg {
+      fill: var(--link-color);
+    }
+    #w3lDemoBar.w3l-demo-bar .w3l-template-options .w3l-buy {
+      opacity: 1;
+    }
+    #w3lDemoBar.w3l-demo-bar .w3l-template-options .w3l-buy,
+    #w3lDemoBar.w3l-demo-bar .w3l-template-options .w3l-download {
+      margin-left: 27px;
+    }
+    #w3lDemoBar.w3l-demo-bar .w3l-template-options .w3l-buy .w3l-icon svg {
+      fill: royalblue;
+    }
+    #w3lDemoBar.w3l-demo-bar a .w3l-icon {
+      vertical-align: bottom;
+    }
+    #w3lDemoBar.w3l-demo-bar .w3l-template-options a .w3l-text {
+      padding-left: 4px;
+    }
+    #w3lDemoBarIframe {
+      display: block;
+      width: 100vw;
+      height: calc( 100vh - 54px );
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding-top: 54px !important;
+      }
+      #w3lDemoBar.w3l-demo-bar {
+        position: fixed;
+        top: 0;
+        display: grid;
+        grid-template-columns: 24px auto auto;
+      }
+      #w3lDemoBar.w3l-demo-bar .w3l-logo {
+        margin: 0 0 0 10px;
+      }
+      #w3lDemoBar.w3l-demo-bar a {
+        color: #e6ebff;
+        opacity: 1;
+      }
+      #w3lDemoBar.w3l-demo-bar .w3l-template-options {
+        /* display: grid; */
+        grid-template-columns: 1fr 1fr;
+      }
+      #w3lDemoBar.w3l-demo-bar .w3l-template-options a .w3l-icon svg {
+        fill: #e6ebff;
+      }
+      #w3lDemoBar.w3l-demo-bar a .w3l-text {
+        display: none;
+      }
+      #w3lDemoBar.w3l-demo-bar .w3l-template-options a {
+        display: inline-block;
+      }
+      #w3lDemoBar.w3l-demo-bar .w3l-template-options .w3l-download {
+        margin-left: 10px;
+      }
+    }
+    @media only screen and (max-width: 64em)  {
+      #w3lDemoBar.w3l-demo-bar .w3l-template-options .w3l-edit {
+        display: none;
+      }
+    }
+    a.nav-link {
+      font: 16px Lato, sans-serif;
+      color: #151B1D
+    }
+
+    a.navbar-brand.mr-lg-5 {
+      font: 34px Lato, sans-serif;
+      color: #151B1D;
+    }
+
+
+    a.btn-style.btn-secondary {
+      border-radius: 5%;
+      background: #FF1654;
+      border-color: #FF1654;
+      font: 16px Lato, sans-serif;
+    }
+
+  </style>
+</head>
+<body>
+<body style="">
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+<script>
+  (function () {
+    if (typeof _bsa !== 'undefined' && _bsa) {
+      // format, zoneKey, segment:value, options
+      _bsa.init('flexbar', 'CKYI627U', 'placement:w3layoutscom');
+    }
+  })();
+</script>
+<script>
+  (function () {
+    if (typeof _bsa !== 'undefined' && _bsa) {
+      // format, zoneKey, segment:value, options
+      _bsa.init('fancybar', 'CKYDL2JN', 'placement:demo');
+    }
+  })();
+</script>
+<script>
+  (function () {
+    if (typeof _bsa !== 'undefined' && _bsa) {
+      // format, zoneKey, segment:value, options
+      _bsa.init('stickybox', 'CKYI653J', 'placement:w3layoutscom');
+    }
+  })();
+</script>
+<!--<script>(function(v,d,o,ai){ai=d.createElement("script");ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, "//a.vdo.ai/core/w3layouts_V2/vdo.ai.js?vdo=34");</script>-->
+<div id="codefund"><!-- fallback content --></div>
+<script src="https://codefund.io/properties/441/funder.js" async="async"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-149859901-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149859901-1');
+</script>
+
+<script>
+  window.ga = window.ga || function () {
+    (ga.q = ga.q || []).push(arguments)
+  };
+  ga.l = +new Date;
+  ga('create', 'UA-149859901-1', 'demo.w3layouts.com');
+  ga('require', 'eventTracker');
+  ga('require', 'outboundLinkTracker');
+  ga('require', 'urlChangeTracker');
+  ga('send', 'pageview');
+</script>
+<script async="" src="/js/autotrack.js"></script>
+
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/images/demobar_w3_4thDec2019.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- Demo bar start -->
+<div id="w3lDemoBar" class="w3l-demo-bar">
+  <a href="https://w3layouts.com/?p=41524" ga-on="click" ga-event-category="Traversal Template" ga-event-action="view"
+     ga-event-label="Traversal - view">
+    <span class="w3l-icon -back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path opacity=".87"
+                                                                                                 fill="none"
+                                                                                                 d="M0 0h24v24H0V0z"></path><path
+          d="M16.62 2.99c-.49-.49-1.28-.49-1.77 0L6.54 11.3c-.39.39-.39 1.02 0 1.41l8.31 8.31c.49.49 1.28.49 1.77 0s.49-1.28 0-1.77L9.38 12l7.25-7.25c.48-.48.48-1.28-.01-1.76z"></path></svg>
+    </span>
+    <span class="w3l-text">Back</span>
+  </a>
+  <a href="https://w3layouts.com/" class="w3l-logo">W3layouts</a>
+  <div class="w3l-template-options"><a href="https://edit.w3layouts.com/CreateEditableTemplate/BuildMyEditor/41524"
+                                       class="w3l-edit" ga-on="click" ga-event-category="Traversal Template"
+                                       ga-event-action="edit" ga-event-label="Traversal - edit">
+<span class="w3l-icon -edit">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path
+  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path><path
+  d="M0 0h24v24H0z" fill="none"></path></svg>
+</span>
+    <span class="w3l-text">Edit</span>
+  </a>
+    <a href="https://w3layouts.com/?p=41524" class="w3l-download" ga-on="click" ga-event-category="Traversal Template"
+       ga-event-action="download-options" ga-event-label="Traversal - Download options"
+       title="Free download requires Backlink">
+      <span class="w3l-icon -download">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path
+          d="M19 12v7H5v-7H3v7c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zm-6 .67l2.59-2.58L17 11.5l-5 5-5-5 1.41-1.41L11 12.67V3h2z"></path><path
+          fill="none" d="M0 0h24v24H0z"></path></svg>
+      </span>
+      <span class="w3l-text">Download</span>
+    </a>
+    <a href="https://w3layouts.com/?p=41524" class="w3l-buy" ga-on="click" ga-event-category="Traversal Template"
+       ga-event-action="Buy Now" ga-event-label="Traversal - Buy" title="Remove Backlink from template">
+      <span class="w3l-icon -buy">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path
+          d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path><path
+          d="M0 0h24v24H0z" fill="none"></path></svg>
+      </span>
+      <span class="w3l-text">Buy Now</span>
+    </a>
+  </div>
+</div>
+
+<!--header-->
+<header id="site-header" class="fixed-top nav-fixed">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg stroke">
+      <h1><a class="navbar-brand mr-lg-5" href="index.html">
+        Traversal
+      </a></h1>
+      <!-- if logo is image enable this
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+      <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+              data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+        <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Packages</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              Blog<span class="fa fa-angle-down"></span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+              <a class="dropdown-item" href="blog.html">Blog Posts</a>
+              <a class="dropdown-item" href="blog-single.html">Blog single</a>
+              <a class="dropdown-item" href="landing-single.html">Landing Page</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="d-lg-block d-none">
+        <a href="contact.html" class="btn btn-style btn-secondary">Get In Touch</a>
+      </div>
+      <!-- toggle switch for light and dark theme -->
+      <div class="mobile-position">
+        <nav class="navigation">
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox">
+              <div class="mode-container">
+                <i class="gg-sun"></i>
+                <i class="gg-moon"></i>
+              </div>
+            </label>
+          </div>
+        </nav>
+      </div>
+      <!-- //toggle switch for light and dark theme -->
+    </nav>
+  </div>
+</header>
+<!-- //header -->
+<!--banner-slider-->
+<!-- main-slider -->
+<section class="w3l-main-slider" id="home">
+  <div class="banner-content">
+    <div id="demo-1"
+         data-zs-src="[&quot;assets/images/banner1.jpg&quot;, &quot;assets/images/banner2.jpg&quot;,&quot;assets/images/banner3.jpg&quot;, &quot;assets/images/banner4.jpg&quot;]"
+         data-zs-overlay="dots" class="zs-enabled overlay-dots">
+      <div class="zs-slideshow">
+        <div class="zs-slides">
+          <div class="zs-slide zs-slide-0 active"
+               style="background-image: url(&quot;https://demo.w3layouts.com/demos_new/template_demo/18-08-2020/traversal-liberty-demo_Free/156905689/web/assets/images/banner1.jpg&quot;); transition: transform 8000ms ease-out 0s, opacity 800ms ease 0s; opacity: 1; transform: scale(1, 1); z-index: 2;"></div>
+          <div class="zs-slide zs-slide-1"
+               style="background-image: url(&quot;https://demo.w3layouts.com/demos_new/template_demo/18-08-2020/traversal-liberty-demo_Free/156905689/web/assets/images/banner2.jpg&quot;);"></div>
+          <div class="zs-slide zs-slide-2"
+               style="background-image: url(&quot;https://demo.w3layouts.com/demos_new/template_demo/18-08-2020/traversal-liberty-demo_Free/156905689/web/assets/images/banner3.jpg&quot;);"></div>
+          <div class="zs-slide zs-slide-3"
+               style="background-image: url(&quot;https://demo.w3layouts.com/demos_new/template_demo/18-08-2020/traversal-liberty-demo_Free/156905689/web/assets/images/banner4.jpg&quot;);"></div>
+        </div>
+        <div class="zs-bullets">
+          <div class="zs-bullet zs-bullet-0 active"></div>
+          <div class="zs-bullet zs-bullet-1"></div>
+          <div class="zs-bullet zs-bullet-2"></div>
+          <div class="zs-bullet zs-bullet-3"></div>
+        </div>
+      </div>
+      <div class="demo-inner-content">
+        <div class="container">
+          <div class="banner-infhny">
+            <h3>You don't need to go far to find what matters.</h3>
+            <h6 class="mb-3">Discover your next adventure</h6>
+            <div class="flex-wrap search-wthree-field mt-md-5 mt-4">
+              <form action="#" method="post" class="booking-form">
+                <div class="row book-form">
+                  <div class="form-input col-md-4 mt-md-0 mt-3">
+
+                    <select name="selectpicker" class="selectpicker">
+                      <option value="">Destinaion</option>
+                      <option value="africa">Africa</option>
+                      <option value="america">America</option>
+                      <option value="asia">Asia</option>
+                      <option value="eastern-europe">Eastern Europe</option>
+                      <option value="europe">Europe</option>
+                      <option value="south-america">South America</option>
+                    </select>
+
+                  </div>
+                  <div class="form-input col-md-4 mt-md-0 mt-3">
+
+                    <input type="date" name="" placeholder="Date" required="">
+                  </div>
+                  <div class="bottom-btn col-md-4 mt-md-0 mt-3">
+                    <button class="btn btn-style btn-secondary"><span class="fa fa-search mr-3"
+                                                                      aria-hidden="true"></span> Search
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /main-slider -->
+<!-- //banner-slider-->
+
+<!--/grids-->
+<section class="w3l-grids-3 py-5">
+  <div class="container py-md-5">
+    <div style="margin: 8px auto; display: block; text-align:center;">
+
+      <!---728x90--->
+
+
+    </div>
+    <div class="title-content text-left mb-lg-5 mb-4">
+      <h6 class="sub-title">Visit</h6>
+      <h3 class="hny-title">Popular Destinations</h3>
+    </div>
+    <div style="margin: 8px auto; display: block; text-align:center;">
+
+      <!---728x90--->
+
+    </div>
+    <div class="row bottom-ab-grids">
+      <!--/row-grids-->
+      <div class="col-lg-6 subject-card mt-lg-0 mt-4">
+        <div class="subject-card-header p-4">
+          <a href="#" class="card_title p-lg-4d-block">
+            <div class="row align-items-center">
+              <div class="col-sm-5 subject-img">
+                <img src="assets/images/g1.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                <h4>Paris</h4>
+                <p>3Days, 4 Nights</p>
+                <div class="dst-btm">
+                  <h6 class=""> Start From </h6>
+                  <span>$1650</span>
+                </div>
+                <p class="sub-para">Per person on twin sharing</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6 subject-card mt-lg-0 mt-4">
+        <div class="subject-card-header p-4">
+          <a href="#" class="card_title p-lg-4d-block">
+            <div class="row align-items-center">
+              <div class="col-sm-5 subject-img">
+                <img src="assets/images/g2.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                <h4>Bankok</h4>
+                <p>3Days, 4 Nights</p>
+                <div class="dst-btm">
+                  <h6 class=""> Start From </h6>
+                  <span>$1850</span>
+                </div>
+                <p class="sub-para">Per person on twin sharing</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!--//row-grids-->
+      <!--/row-grids-->
+      <div class="col-lg-6 subject-card mt-4">
+        <div class="subject-card-header p-4">
+          <a href="#" class="card_title p-lg-4d-block">
+            <div class="row align-items-center">
+              <div class="col-sm-5 subject-img">
+                <img src="assets/images/g3.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                <h4>Maldives</h4>
+                <p>3Days, 4 Nights</p>
+                <div class="dst-btm">
+                  <h6 class=""> Start From </h6>
+                  <span>$1350</span>
+                </div>
+                <p class="sub-para">Per person on twin sharing</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6 subject-card mt-4">
+        <div class="subject-card-header p-4">
+          <a href="#" class="card_title p-lg-4d-block">
+            <div class="row align-items-center">
+              <div class="col-sm-5 subject-img">
+                <img src="assets/images/g4.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                <h4>Greece</h4>
+                <p>3Days, 4 Nights</p>
+                <div class="dst-btm">
+                  <h6 class=""> Start From </h6>
+                  <span>$1650</span>
+                </div>
+                <p class="sub-para">Per person on twin sharing</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!--//row-grids-->
+      <!--/row-grids-->
+      <div class="col-lg-6 subject-card mt-4">
+        <div class="subject-card-header p-4">
+          <a href="#" class="card_title p-lg-4d-block">
+            <div class="row align-items-center">
+              <div class="col-sm-5 subject-img">
+                <img src="assets/images/g5.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                <h4>London</h4>
+                <p>3Days, 4 Nights</p>
+                <div class="dst-btm">
+                  <h6 class=""> Start From </h6>
+                  <span>$1750</span>
+                </div>
+                <p class="sub-para">Per person on twin sharing</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6 subject-card mt-4">
+        <div class="subject-card-header p-4">
+          <a href="#" class="card_title p-lg-4d-block">
+            <div class="row align-items-center">
+              <div class="col-sm-5 subject-img">
+                <img src="assets/images/g6.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                <h4>Julian Alps</h4>
+                <p>3Days, 4 Nights</p>
+                <div class="dst-btm">
+                  <h6 class=""> Start From </h6>
+                  <span>$1950</span>
+                </div>
+                <p class="sub-para">Per person on twin sharing</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!--//row-grids-->
+      <!--/row-grids-->
+      <div class="col-lg-6 subject-card mt-4">
+        <div class="subject-card-header p-4">
+          <a href="#" class="card_title p-lg-4d-block">
+            <div class="row align-items-center">
+              <div class="col-sm-5 subject-img">
+                <img src="assets/images/g7.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                <h4>Thailand</h4>
+                <p>3Days, 4 Nights</p>
+                <div class="dst-btm">
+                  <h6 class=""> Start From </h6>
+                  <span>$1750</span>
+                </div>
+                <p class="sub-para">Per person on twin sharing</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6 subject-card mt-4">
+        <div class="subject-card-header p-4">
+          <a href="#" class="card_title p-lg-4d-block">
+            <div class="row align-items-center">
+              <div class="col-sm-5 subject-img">
+                <img src="assets/images/g8.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                <h4>Singapore</h4>
+                <p>3Days, 4 Nights</p>
+                <div class="dst-btm">
+                  <h6 class=""> Start From </h6>
+                  <span>$1950</span>
+                </div>
+                <p class="sub-para">Per person on twin sharing</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!--//row-grids-->
+    </div>
+  </div>
+</section>
+<!--//grids-->
+<!-- stats -->
+<section class="w3l-stats py-5" id="stats">
+  <div class="gallery-inner container py-lg-0 py-3">
+    <div class="row stats-con pb-lg-3">
+      <div class="col-lg-3 col-6 stats_info counter_grid">
+        <p class="counter">730</p>
+        <h4>Branches</h4>
+      </div>
+      <div class="col-lg-3 col-6 stats_info counter_grid1">
+        <p class="counter">1680</p>
+        <h4>Travel Guides</h4>
+      </div>
+      <div class="col-lg-3 col-6 stats_info counter_grid mt-lg-0 mt-5">
+        <p class="counter">812</p>
+        <h4>Happy Customers</h4>
+      </div>
+      <div class="col-lg-3 col-6 stats_info counter_grid2 mt-lg-0 mt-5">
+        <p class="counter">990</p>
+        <h4>Awards</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- //stats -->
+<!--/-->
+<div class="best-rooms py-5">
+  <div class="container py-md-5">
+    <div class="ban-content-inf row">
+      <div class="maghny-gd-1 col-lg-6">
+        <div class="maghny-grid">
+          <figure class="effect-lily border-radius  m-0">
+            <img class="img-fluid" src="assets/images/g10.jpg" alt="">
+            <figcaption>
+              <div>
+                <h4>3Days, 4 Nights</h4>
+                <p>From 1720$ </p>
+              </div>
+
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="maghny-gd-1 col-lg-6 mt-lg-0 mt-4">
+        <div class="row">
+          <div class="maghny-gd-1 col-6">
+            <div class="maghny-grid">
+              <figure class="effect-lily border-radius">
+                <img class="img-fluid" src="assets/images/g9.jpg" alt="">
+                <figcaption>
+                  <div>
+                    <h4>3Days, 4 Nights</h4>
+                    <p>From 1220$ </p>
+                  </div>
+
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="maghny-gd-1 col-6">
+            <div class="maghny-grid">
+              <figure class="effect-lily border-radius">
+                <img class="img-fluid" src="assets/images/g8.jpg" alt="">
+                <figcaption>
+                  <div>
+                    <h4>3Days, 4 Nights</h4>
+                    <p>From 1620$ </p>
+                  </div>
+
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="maghny-gd-1 col-6 mt-4">
+            <div class="maghny-grid">
+              <figure class="effect-lily border-radius">
+                <img class="img-fluid" src="assets/images/g7.jpg" alt="">
+                <figcaption>
+                  <div>
+                    <h4>3Days, 4 Nights</h4>
+                    <p>From 1820$ </p>
+                  </div>
+
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="maghny-gd-1 col-6 mt-4">
+            <div class="maghny-grid">
+              <figure class="effect-lily border-radius">
+                <img class="img-fluid" src="assets/images/g6.jpg" alt="">
+                <figcaption>
+                  <div>
+                    <h4>3Days, 4 Nights</h4>
+                    <p>From 1520$ </p>
+                  </div>
+
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //stats -->
+<!--/w3l-bottom-->
+<section class="w3l-bottom py-5">
+  <div class="container py-md-4 py-3 text-center">
+    <div class="row my-lg-4 mt-4">
+      <div class="col-lg-9 col-md-10 ml-auto">
+        <div class="bottom-info ml-auto">
+          <div class="header-section text-left">
+            <h3 class="hny-title two">Traveling makes a man wiser, but less happy.</h3>
+            <p class="mt-3 pr-lg-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae laudantium
+              voluptate rem ullam dolore nisi voluptatibus esse quasi. Integer sit amet .Lorem ipsum dolor sit
+              amet adipisicing elit.</p>
+            <a href="about.html" class="btn btn-style btn-secondary mt-5">Read More</a>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--//w3l-bottom-->
+<!-- testimonials -->
+<section class="w3l-clients" id="clients">
+  <!-- /grids -->
+  <div class="cusrtomer-layout py-5">
+    <div class="container py-lg-4 py-md-3 pb-lg-0">
+      <div class="heading text-center mx-auto">
+        <h6 class="sub-title text-center">Here’s what they have to say</h6>
+        <h3 class="hny-title mb-md-5 mb-4">our clients do the talking</h3>
+      </div>
+      <!-- /grids -->
+      <div class="testimonial-width">
+        <div id="owl-demo1" class="owl-two owl-carousel owl-theme owl-loaded owl-drag">
+
+
+          <div class="owl-stage-outer">
+            <div class="owl-stage"
+                 style="transform: translate3d(-1060px, 0px, 0px); transition: all 0s ease 0s; width: 4240px;">
+              <div class="owl-item cloned" style="width: 510px; margin-right: 20px;">
+                <div class="item">
+                  <div class="testimonial-content">
+                    <div class="testimonial">
+                      <blockquote>
+                        <span class="fa fa-quote-left" aria-hidden="true"></span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae laudantium
+                        voluptate rem ullam dolore nisi voluptatibus esse quasi. Integer sit amet .Lorem ipsum dolor sit
+                        amet adipisicing elit. Laborum dolor facere ipsum adipisicingelit.
+                      </blockquote>
+                      <div class="testi-des">
+                        <div class="test-img"><img src="assets/images/c3.jpg" class="img-fluid" alt="client-img">
+                        </div>
+                        <div class="peopl align-self">
+                          <h3>Roy Linderson</h3>
+                          <p class="indentity">Example City</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="owl-item cloned" style="width: 510px; margin-right: 20px;">
+                <div class="item">
+                  <div class="testimonial-content">
+                    <div class="testimonial">
+                      <blockquote>
+                        <span class="fa fa-quote-left" aria-hidden="true"></span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae laudantium
+                        voluptate rem ullam dolore nisi voluptatibus esse quasi. Integer sit amet .Lorem ipsum dolor sit
+                        amet adipisicing elit. Laborum dolor facere ipsum adipisicingelit.
+                      </blockquote>
+                      <div class="testi-des">
+                        <div class="test-img"><img src="assets/images/c4.jpg" class="img-fluid" alt="client-img">
+                        </div>
+                        <div class="peopl align-self">
+                          <h3>Mike Thyson</h3>
+                          <p class="indentity">Example City</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="owl-item active" style="width: 510px; margin-right: 20px;">
+                <div class="item">
+                  <div class="testimonial-content">
+                    <div class="testimonial">
+                      <blockquote>
+                        <span class="fa fa-quote-left" aria-hidden="true"></span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae laudantium
+                        voluptate rem ullam dolore nisi voluptatibus esse quasi. Integer sit amet .Lorem ipsum dolor sit
+                        amet adipisicing elit. Laborum dolor facere ipsum adipisicingelit.
+                      </blockquote>
+                      <div class="testi-des">
+                        <div class="test-img"><img src="assets/images/c1.jpg" class="img-fluid" alt="client-img">
+                        </div>
+                        <div class="peopl align-self">
+                          <h3>Rohit Paul</h3>
+                          <p class="indentity">Example City</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="owl-item" style="width: 510px; margin-right: 20px;">
+                <div class="item">
+                  <div class="testimonial-content">
+                    <div class="testimonial">
+                      <blockquote>
+                        <span class="fa fa-quote-left" aria-hidden="true"></span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae laudantium
+                        voluptate rem ullam dolore nisi voluptatibus esse quasi. Integer sit amet .Lorem ipsum dolor sit
+                        amet adipisicing elit. Laborum dolor facere ipsum adipisicingelit.
+                      </blockquote>
+                      <div class="testi-des">
+                        <div class="test-img"><img src="assets/images/c2.jpg" class="img-fluid" alt="client-img">
+                        </div>
+                        <div class="peopl align-self">
+                          <h3>Shveta</h3>
+                          <p class="indentity">Example City</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="owl-item" style="width: 510px; margin-right: 20px;">
+                <div class="item">
+                  <div class="testimonial-content">
+                    <div class="testimonial">
+                      <blockquote>
+                        <span class="fa fa-quote-left" aria-hidden="true"></span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae laudantium
+                        voluptate rem ullam dolore nisi voluptatibus esse quasi. Integer sit amet .Lorem ipsum dolor sit
+                        amet adipisicing elit. Laborum dolor facere ipsum adipisicingelit.
+                      </blockquote>
+                      <div class="testi-des">
+                        <div class="test-img"><img src="assets/images/c3.jpg" class="img-fluid" alt="client-img">
+                        </div>
+                        <div class="peopl align-self">
+                          <h3>Roy Linderson</h3>
+                          <p class="indentity">Example City</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="owl-item" style="width: 510px; margin-right: 20px;">
+                <div class="item">
+                  <div class="testimonial-content">
+                    <div class="testimonial">
+                      <blockquote>
+                        <span class="fa fa-quote-left" aria-hidden="true"></span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae laudantium
+                        voluptate rem ullam dolore nisi voluptatibus esse quasi. Integer sit amet .Lorem ipsum dolor sit
+                        amet adipisicing elit. Laborum dolor facere ipsum adipisicingelit.
+                      </blockquote>
+                      <div class="testi-des">
+                        <div class="test-img"><img src="assets/images/c4.jpg" class="img-fluid" alt="client-img">
+                        </div>
+                        <div class="peopl align-self">
+                          <h3>Mike Thyson</h3>
+                          <p class="indentity">Example City</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="owl-item cloned" style="width: 510px; margin-right: 20px;">
+                <div class="item">
+                  <div class="testimonial-content">
+                    <div class="testimonial">
+                      <blockquote>
+                        <span class="fa fa-quote-left" aria-hidden="true"></span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae laudantium
+                        voluptate rem ullam dolore nisi voluptatibus esse quasi. Integer sit amet .Lorem ipsum dolor sit
+                        amet adipisicing elit. Laborum dolor facere ipsum adipisicingelit.
+                      </blockquote>
+                      <div class="testi-des">
+                        <div class="test-img"><img src="assets/images/c1.jpg" class="img-fluid" alt="client-img">
+                        </div>
+                        <div class="peopl align-self">
+                          <h3>Rohit Paul</h3>
+                          <p class="indentity">Example City</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="owl-item cloned" style="width: 510px; margin-right: 20px;">
+                <div class="item">
+                  <div class="testimonial-content">
+                    <div class="testimonial">
+                      <blockquote>
+                        <span class="fa fa-quote-left" aria-hidden="true"></span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae laudantium
+                        voluptate rem ullam dolore nisi voluptatibus esse quasi. Integer sit amet .Lorem ipsum dolor sit
+                        amet adipisicing elit. Laborum dolor facere ipsum adipisicingelit.
+                      </blockquote>
+                      <div class="testi-des">
+                        <div class="test-img"><img src="assets/images/c2.jpg" class="img-fluid" alt="client-img">
+                        </div>
+                        <div class="peopl align-self">
+                          <h3>Shveta</h3>
+                          <p class="indentity">Example City</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="owl-nav disabled">
+            <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous"> <span
+              class="fa fa-angle-left"></span> </span></button>
+            <button type="button" role="presentation" class="owl-next"><span aria-label="Next"> <span
+              class="fa fa-angle-right"></span> </span></button>
+          </div>
+          <div class="owl-dots">
+            <button role="button" class="owl-dot active"><span></span></button>
+            <button role="button" class="owl-dot"><span></span></button>
+            <button role="button" class="owl-dot"><span></span></button>
+            <button role="button" class="owl-dot"><span></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /grids -->
+  </div>
+  <!-- //grids -->
+</section>
+<!-- //testimonials -->
+<div style="margin: 8px auto; display: block; text-align:center;">
+
+  <!---728x90--->
+
+</div>
+<!--/w3l-footer-29-main-->
+<footer>
+  <!-- footer -->
+  <section class="w3l-footer">
+    <div class="w3l-footer-16-main py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 column">
+            <div class="row">
+              <div class="col-md-4 column">
+                <h3>Company</h3>
+                <ul class="footer-gd-16">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4 column mt-md-0 mt-4">
+                <h3>Useful Links</h3>
+                <ul class="footer-gd-16">
+                  <li><a href="#url">Destinations</a></li>
+                  <li><a href="#url">Our Branches</a></li>
+                  <li><a href="#url">Latest Media</a></li>
+                  <li><a href="about.html">About Company</a></li>
+                  <li><a href="#url">Our Packages</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4 column mt-md-0 mt-4">
+                <h3>Our Services</h3>
+                <ul class="footer-gd-16">
+                  <li><a href="#url">Privacy Policy</a></li>
+                  <li><a href="#url">Our Terms</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="landing-single.html">Landing Page</a></li>
+                  <li><a href="#url">Our Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 column pl-lg-5 column4 mt-lg-0 mt-5">
+            <h3>Newsletter </h3>
+            <div class="end-column">
+              <h4>Get latest updates and offers.</h4>
+              <form action="#" class="subscribe" method="post">
+                <input type="email" name="email" placeholder="Email Address" required="">
+                <button type="submit">Go</button>
+              </form>
+              <p>Sign up for our latest news &amp; articles. We won’t give you spam mails.</p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex below-section justify-content-between align-items-center pt-4 mt-5">
+          <div class="columns text-lg-left text-center">
+            <p>© 2020 Traversal. All rights reserved.Design by <a href="https://w3layouts.com/" target="_blank">
+              W3Layouts</a>
+            </p>
+          </div>
+          <div class="columns-2 mt-lg-0 mt-3">
+            <ul class="social">
+              <li><a href="#facebook"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+              </li>
+              <li><a href="#linkedin"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+              </li>
+              <li><a href="#twitter"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+              </li>
+              <li><a href="#google"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
+              </li>
+              <li><a href="#github"><span class="fa fa-github" aria-hidden="true"></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top" style="display: block;">
+      <span class="fa fa-angle-up"></span>
+    </button>
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction()
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("movetop").style.display = "block";
+        } else {
+          document.getElementById("movetop").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    <!-- //move top -->
+    <script>
+      $(function () {
+        $('.navbar-toggler').click(function () {
+          $('body').toggleClass('noscroll');
+        })
+      });
+    </script>
+  </section>
+  <!-- //footer -->
+</footer>
+<!-- Template JavaScript -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/theme-change.js"></script>
+<!--/slider-js-->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/modernizr-2.6.2.min.js"></script>
+<script src="assets/js/jquery.zoomslider.min.js"></script>
+<!--//slider-js-->
+<script src="assets/js/owl.carousel.js"></script>
+<!-- script for tesimonials carousel slider -->
+<script>
+  $(document).ready(function () {
+    $("#owl-demo1").owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: false,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        736: {
+          items: 1,
+          nav: false
+        },
+        1000: {
+          items: 1,
+          nav: false,
+          loop: true
+        }
+      }
+    })
+  })
+</script>
+<!-- //script for tesimonials carousel slider -->
+<!-- stats number counter-->
+<script src="assets/js/jquery.waypoints.min.js"></script>
+<script src="assets/js/jquery.countup.js"></script>
+<script>
+  $('.counter').countUp();
+</script>
+<!-- //stats number counter -->
+
+<!--/MENU-JS-->
+<script>
+  $(window).on("scroll", function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 80) {
+      $("#site-header").addClass("nav-fixed");
+    } else {
+      $("#site-header").removeClass("nav-fixed");
+    }
+  });
+
+  //Main navigation Active Class Add Remove
+  $(".navbar-toggler").on("click", function () {
+    $("header").toggleClass("active");
+  });
+  $(document).on("ready", function () {
+    if ($(window).width() > 991) {
+      $("header").removeClass("active");
+    }
+    $(window).on("resize", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+    });
+  });
+</script>
+<!--//MENU-JS-->
+
+<script src="assets/js/bootstrap.min.js"></script>
+
+
+</body>
+</body>
+</html>
